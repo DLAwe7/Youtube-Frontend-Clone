@@ -12,7 +12,7 @@ function useAutoFocusOnOpen(isOpen, containerRef) {
             'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
         );
 
-        firstFocusable?.focus();
+        firstFocusable?.focus({ preventScroll: true });
     }, [isOpen, containerRef]);
 }
 
