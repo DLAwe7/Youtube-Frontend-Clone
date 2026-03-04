@@ -1,0 +1,25 @@
+.youtube-icon{
+    display: flex;
+    align-items: center;
+    color: red;
+    font-size: 30px;
+    position: relative;
+    text-decoration: none;
+}
+
+.youtube-icon path{
+    color: red;
+}
+
+.youtube-name{
+    font-size: 1.5rem;
+    
+}
+
+.viewer-country {
+    font-size: 10px;
+    position: absolute;
+    top: 0px;
+    right: -15px;
+    color: var(--grayed-text-color);
+}

@@ -1,0 +1,27 @@
+.button-storage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.button-storage:hover {
+    background-color: var(--buttons-hover-color);
+}
+
+.button-storage-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.button-storage-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 9;
+}

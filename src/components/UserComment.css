@@ -1,0 +1,82 @@
+.user-comment-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.user-comment-container.m-left {
+
+    margin-left: 40px;
+
+}
+
+.user-comment-container img {
+    align-self: flex-start;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+}
+
+.user-comment-container img.focused {
+    width: 40px;
+    height: 40px;
+}
+
+.user-input-container {
+    width: 100%;
+}
+
+.user-input-container input {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid hsl(0, 0%, 50%);
+    font-size: 14px;
+    padding: 3px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.user-input-container input:focus {
+    outline: none;
+    border-bottom: 1px solid hsl(0, 0%, 70%);
+}
+
+
+.cancel-add-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 10px;
+
+}
+
+.user-buttons-container {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-buttons-container.display {
+    display: flex;
+}
+
+.box-comment-wrapper {
+    position: relative;
+}
+
+
+.thread-hook {
+    position: absolute;
+    left: 16px;
+    top: -35px;
+    width: 15px;
+    height: 50px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    border-bottom-left-radius: 20px;
+    pointer-events: none;
+}

@@ -1,0 +1,82 @@
+.bell-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.bell-button {
+    background: none;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.bell-button:hover {
+    background-color: var(--buttons-hover-color);
+}
+
+.notifications-dropdown {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    z-index: 11;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 6px;
+    overflow: hidden;
+    min-width: 480px;
+    min-height: 630px;
+}
+
+.notifications-li-btn {
+
+    padding: 20px;
+
+}
+
+
+.notifications-header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid gray;
+}
+
+.notifications-header-wrapper h2 {
+    font-weight: lighter;
+    font-size: 16px;
+
+}
+
+.notifications-header-button {
+    background: none;
+    font-size: 20px;
+}
+
+.empty-notifications-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}
+
+.empty-notifications-list svg {
+    width: 120px;
+    height: 120px;
+}
+
+.empty-notf-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 50%;
+    text-align: center;
+}
+
+.empty-notf-text p {
+
+    font-size: 14px;
+}

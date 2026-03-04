@@ -1,0 +1,111 @@
+.button-carroussel {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.carroussel-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+}
+
+.swiper.carroussel-button-container {
+    margin: 0;
+}
+
+
+.carroussel-button-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.button-wrapper {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+
+}
+
+.general-carroussel-button {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 40px;
+    padding: 10px;
+    gap: 10px;
+    white-space: nowrap;
+
+}
+
+.general-carroussel-button:hover {
+    background-color: var(--buttons-hover-color);
+}
+
+.directional-button {
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    background: none;
+}
+
+.directional-button:hover {
+    background-color: var(--description-color);
+}
+
+.directional-button.visible {
+    display: flex;
+}
+
+.directional-button.disabled {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.button-carroussel.mquery {
+    display: none;
+}
+
+.button-carroussel.home {
+    justify-content: flex-start;
+    margin: 0;
+    margin-top: 20px;
+}
+
+
+
+@media (max-width: 1050px) {
+
+    .button-carroussel.secondarySection {
+        display: none;
+
+
+
+    }
+
+    .button-carroussel.mquery {
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+
+
+
+
+}

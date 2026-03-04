@@ -1,0 +1,16 @@
+.hamburguer-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 10px;
+    height: 10px;
+    padding: 20px;
+}
+
+.hamburguer-menu:hover{
+    background-color: var(--light-button-hover);
+}

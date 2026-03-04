@@ -1,0 +1,37 @@
+.skeleton {
+    pointer-events: none;
+}
+
+.skeleton-box {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #5a5a5a20;
+    border-radius: 12px;
+}
+
+.skeleton-line {
+    height: 14px;
+    background-color: #ccc;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.skeleton-line.title {
+    width: 90%;
+}
+
+.skeleton-line.channel {
+    width: 60%;
+}
+
+.list-video.small-size {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.list-video.long-size {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

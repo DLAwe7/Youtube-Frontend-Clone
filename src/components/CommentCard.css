@@ -1,0 +1,179 @@
+.box-comment-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.comment-paragraph {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.box-comment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.scaled-comment-box {
+    margin-top: 10px;
+    padding-left: 50px;
+}
+
+.avatar.scaledAvatar {
+    width: clamp(20px, 4vw, 32px);
+    height: clamp(20px, 4vw, 32px);
+
+}
+
+.avatar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: clamp(10px, 2vw, 16px);
+    width: clamp(20px, 5vw, 40px);
+    height: clamp(20px, 5vw, 40px);
+    border-radius: 50%;
+}
+
+
+.comment-info-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+
+.comment-date-name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.comment-name {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: var(--grayed-text-color);
+}
+
+.translate-button {
+    font-size: 14px;
+    color: var(--grayed-text-color);
+    background: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.report-button-wrapper {
+    margin-left: auto;
+    position: relative;
+}
+
+.report-button {
+    background: none;
+    align-self: flex-start;
+}
+
+.comment-buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 12px;
+    max-width: max-content;
+}
+
+
+
+.comment-like-button-wrapper,
+.comment-dislike-button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+
+}
+
+.comment-like-button-wrapper span {
+    display: inline-block;
+    min-width: 4ch;
+
+}
+
+.comment-like-button,
+.comment-dislike-button {
+
+    background: none;
+}
+
+.active-icon path {
+    fill: rgb(0, 136, 255);
+    transition: fill 0.2s;
+}
+
+.comment-like-button svg:hover,
+.comment-dislike-button svg:hover {
+    background-color: var(--buttons-hover-color);
+    box-shadow: 0 0 0 8px var(--buttons-hover-color);
+}
+
+.comment-like-button svg,
+.comment-dislike-button svg {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+
+.show-replies-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 118px;
+    height: 36px;
+    background: none;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--add-comment-color);
+    margin-left: 25px;
+}
+
+.show-replies-toggle:hover {
+    background-color: var(--show-replies-hover);
+}
+
+.show-replies-toggle path {
+    color: var(--add-comment-color)
+}
+
+.show-replies-toggle.hidden {
+    display: none;
+}
+
+.show-replies-toggle.open {
+    margin-left: 50px;
+}
+
+@media(max-width: 500px) {
+
+    .comment-buttons-container {
+        font-size: 11px;
+
+        gap: 27px;
+
+        max-width: max-content;
+    }
+
+    .comment-like-button svg,
+    .comment-dislike-button svg {
+        width: 16px;
+        height: 16px;
+    }
+}

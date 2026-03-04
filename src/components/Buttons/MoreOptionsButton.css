@@ -1,0 +1,75 @@
+.more-options-button {
+    position: relative;
+    align-self: flex-start;
+    border: none;
+    background: none;
+    z-index: 9;
+    width: 24px;
+    height: 24px;
+    font-size: 15px;
+    border-radius: 50%;
+}
+
+.more-options-button.secondarySection {
+    position: absolute;
+    top: -5px;
+    right: 0px;
+}
+
+
+.more-options-button::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.15s ease;
+    z-index: -1;
+}
+
+.more-options-button:hover::before {
+    background-color: var(--buttons-hover-color);
+}
+
+.more-options-container {
+    margin-top: 5px;
+    min-width: 200px;
+    width: max-content;
+    z-index: 9;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 6px;
+}
+
+.more-options-li button {
+    width: 100%;
+    text-align: start;
+    padding: 10px;
+    background: none;
+}
+
+.more-options-li button:hover {
+    background-color: var(--buttons-hover-color);
+}
+
+
+.more-options-container.horizontal,
+.more-options-container.grid {
+    right: 0;
+}
+
+.more-options-container.shorts {
+    right: 0;
+    bottom: 80px;
+
+}
+
+@media(max-width: 1050px) {
+
+
+
+    .more-options-wrapper.secondarySection {
+        display: flex;
+    }
+
+}

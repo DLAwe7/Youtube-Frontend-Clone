@@ -1,0 +1,122 @@
+.user-info-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.userImage-button {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.user-info-dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 10px;
+    min-width: 200px;
+    width: max-content;
+    z-index: 11;
+}
+
+.u-info-li-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 9rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #6b7280 transparent;
+}
+
+.u-info-li-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.u-info-li-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.u-info-li-wrapper::-webkit-scrollbar-thumb {
+    background-color: #6b7280;
+    border-radius: 8px;
+}
+
+.user-info-block {
+    display: flex;
+    gap: 20px;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid gray;
+
+}
+
+.user-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 16px;
+}
+
+.user-info-text a {
+    font-size: 14px;
+    color: #3EA6FF;
+}
+
+.user-info-card {
+    display: flex;
+    font-size: 14px;
+}
+
+.user-info-icon {
+    width: 20px;
+    text-align: center;
+
+}
+
+.user-info-card button {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    font-size: 14px;
+    width: 100%;
+    background: none;
+}
+
+.user-info-card span {
+    text-align: start;
+    white-space: nowrap;
+}
+
+.user-info-card .extra-icon {
+    margin-left: auto;
+}
+
+.user-info-card button:hover {
+    background-color: var(--buttons-hover-color);
+}
+
+.user-info-card button.space-between {
+    justify-content: space-between;
+}
+
+.dropdown-user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+}
+
+
+
+.u-li.border-bottom {
+    border-bottom: 1px solid rgb(100, 100, 100);
+}

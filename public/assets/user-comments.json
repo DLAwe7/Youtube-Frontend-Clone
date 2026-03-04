@@ -1,0 +1,958 @@
+[
+    {
+        "catVideos": [
+            {
+                "videoId": "SbTY7I2wwNs",
+                "comments": [
+                    {
+                        "id": "c1",
+                        "user": "FluffyCommander",
+                        "imageColor": "#e67e22",
+                        "publishedAt": "2024-10-28T10:07:02.926941Z",
+                        "likes": 312,
+                        "text": "This cat absolutely knows what it's doing 😂",
+                        "replies": [
+                            {
+                                "id": "c1_r1",
+                                "user": "MeowScientist",
+                                "imageColor": "#3498db",
+                                "publishedAt": "2024-10-28T11:02:41.111203Z",
+                                "likes": 44,
+                                "text": "100%. That pause before jumping was calculated."
+                            },
+                            {
+                                "id": "c1_r2",
+                                "user": "FelineAnalyst",
+                                "imageColor": "#8e44ad",
+                                "publishedAt": "2024-10-28T11:10:22.441002Z",
+                                "likes": 21,
+                                "text": "Peak predator energy."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c2",
+                        "user": "CatMom92",
+                        "imageColor": "#9b59b6",
+                        "publishedAt": "2024-10-27T18:55:19.441220Z",
+                        "likes": 189,
+                        "text": "I replayed this like 5 times. My cat judged me the whole time.",
+                        "replies": [
+                            {
+                                "id": "c2_r1",
+                                "user": "JudgeMeow",
+                                "imageColor": "#2ecc71",
+                                "publishedAt": "2024-10-27T19:03:41.118991Z",
+                                "likes": 36,
+                                "text": "Cats are professional judges."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c3",
+                        "user": "LaserPointerGuy",
+                        "imageColor": "#1abc9c",
+                        "publishedAt": "2024-10-27T16:20:04.992441Z",
+                        "likes": 76,
+                        "text": "Why do cats always freeze like that before doing something dumb?",
+                        "replies": [
+                            {
+                                "id": "c3_r1",
+                                "user": "MeowScientist",
+                                "imageColor": "#3498db",
+                                "publishedAt": "2024-10-28T11:02:41.111203Z",
+                                "likes": 44,
+                                "text": "It's their nature."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c4",
+                        "user": "BiscuitMaker",
+                        "imageColor": "#f1c40f",
+                        "publishedAt": "2024-10-26T09:11:51.339110Z",
+                        "likes": 420,
+                        "text": "This cured my bad mood instantly.",
+                        "replies": [
+                            {
+                                "id": "c4_r1",
+                                "user": "MoodFixer",
+                                "imageColor": "#27ae60",
+                                "publishedAt": "2024-10-26T09:20:44.229002Z",
+                                "likes": 58,
+                                "text": "Same, instant serotonin boost."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c5",
+                        "user": "OrangeCatEnergy",
+                        "imageColor": "#e84393",
+                        "publishedAt": "2024-10-26T07:44:18.210991Z",
+                        "likes": 257,
+                        "text": "Tell me this is an orange cat without telling me it’s an orange cat."
+                    },
+                    {
+                        "id": "c6",
+                        "user": "WhiskerWatch",
+                        "imageColor": "#16a085",
+                        "publishedAt": "2024-10-25T21:31:59.004113Z",
+                        "likes": 31,
+                        "text": "That little tail flick at the end 😭",
+                        "replies": [
+                            {
+                                "id": "c6_r1",
+                                "user": "TailTales",
+                                "imageColor": "#34495e",
+                                "publishedAt": "2024-10-25T21:40:10.441002Z",
+                                "likes": 12,
+                                "text": "That flick had attitude."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c7",
+                        "user": "SleepyPaws",
+                        "imageColor": "#2ecc71",
+                        "publishedAt": "2024-10-25T19:12:22.772661Z",
+                        "likes": 58,
+                        "text": "My cat would’ve fallen immediately."
+                    },
+                    {
+                        "id": "c8",
+                        "user": "MemeLord9000",
+                        "imageColor": "#e74c3c",
+                        "publishedAt": "2024-10-25T14:02:09.199882Z",
+                        "likes": 101,
+                        "text": "Someone please add dramatic music to this.",
+                        "replies": [
+                            {
+                                "id": "c8_r1",
+                                "user": "SoundtrackCat",
+                                "imageColor": "#8e44ad",
+                                "publishedAt": "2024-10-25T14:10:55.118991Z",
+                                "likes": 27,
+                                "text": "Hans Zimmer, if you’re listening…"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c9",
+                        "user": "CatTVAddict",
+                        "imageColor": "#34495e",
+                        "publishedAt": "2024-10-24T22:18:44.884220Z",
+                        "likes": 67,
+                        "text": "My cat watched this and attacked the screen."
+                    },
+                    {
+                        "id": "c10",
+                        "user": "Purrfection",
+                        "imageColor": "#8e44ad",
+                        "publishedAt": "2024-10-24T20:03:10.553901Z",
+                        "likes": 143,
+                        "text": "Cats are just tiny chaos machines.",
+                        "replies": [
+                            {
+                                "id": "c10_r1",
+                                "user": "ChaosTheory",
+                                "imageColor": "#1abc9c",
+                                "publishedAt": "2024-10-24T20:12:33.118991Z",
+                                "likes": 35,
+                                "text": "Destruction in loaf form."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "videoId": "AcQeoah5u1A",
+                "comments": [
+                    {
+                        "id": "c1",
+                        "user": "ChairThief",
+                        "imageColor": "#d35400",
+                        "publishedAt": "2024-10-28T09:42:10.114882Z",
+                        "likes": 512,
+                        "text": "That is HIS chair now. End of discussion.",
+                        "replies": [
+                            {
+                                "id": "c1_r1",
+                                "user": "HumanServant",
+                                "imageColor": "#2980b9",
+                                "publishedAt": "2024-10-28T10:01:09.772199Z",
+                                "likes": 88,
+                                "text": "We never owned anything. We just borrow from cats."
+                            },
+                            {
+                                "id": "c1_r2",
+                                "user": "ChairThief",
+                                "imageColor": "#d35400",
+                                "publishedAt": "2024-10-28T10:05:33.992441Z",
+                                "likes": 31,
+                                "text": "Facts."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c2",
+                        "user": "PawPatrol",
+                        "imageColor": "#27ae60",
+                        "publishedAt": "2024-10-27T17:19:22.661442Z",
+                        "likes": 203,
+                        "text": "The confidence though 😭",
+                        "replies": [
+                            {
+                                "id": "c2_r1",
+                                "user": "ConfidenceCoach",
+                                "imageColor": "#9b59b6",
+                                "publishedAt": "2024-10-27T17:28:41.118991Z",
+                                "likes": 42,
+                                "text": "Cats are born CEOs."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c3",
+                        "user": "VoidCatClub",
+                        "imageColor": "#2c3e50",
+                        "publishedAt": "2024-10-27T12:08:49.331002Z",
+                        "likes": 147,
+                        "text": "Black cats always act like they pay rent.",
+                        "replies": [
+                            {
+                                "id": "c3_r1",
+                                "user": "RentCollector",
+                                "imageColor": "#f1c40f",
+                                "publishedAt": "2024-10-27T12:16:22.441002Z",
+                                "likes": 39,
+                                "text": "They think YOU owe THEM rent."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c4",
+                        "user": "KeyboardVictim",
+                        "imageColor": "#c0392b",
+                        "publishedAt": "2024-10-26T23:58:02.119203Z",
+                        "likes": 92,
+                        "text": "Average cat vs productivity.",
+                        "replies": [
+                            {
+                                "id": "c4_r1",
+                                "user": "TaskManager",
+                                "imageColor": "#16a085",
+                                "publishedAt": "2024-10-27T00:03:11.118991Z",
+                                "likes": 21,
+                                "text": "Productivity lost, cat gained."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c5",
+                        "user": "NapTimeCEO",
+                        "imageColor": "#f39c12",
+                        "publishedAt": "2024-10-26T21:01:44.402991Z",
+                        "likes": 61,
+                        "text": "That slow blink at the end was personal."
+                    },
+                    {
+                        "id": "c6",
+                        "user": "FurMissile",
+                        "imageColor": "#16a085",
+                        "publishedAt": "2024-10-26T16:44:10.884220Z",
+                        "likes": 34,
+                        "text": "I knew exactly what was going to happen and still laughed."
+                    },
+                    {
+                        "id": "c7",
+                        "user": "ClawEnthusiast",
+                        "imageColor": "#7f8c8d",
+                        "publishedAt": "2024-10-26T10:19:03.118441Z",
+                        "likes": 80,
+                        "text": "Why are cats allergic to personal space?",
+                        "replies": [
+                            {
+                                "id": "c7_r1",
+                                "user": "PersonalSpaceWho",
+                                "imageColor": "#34495e",
+                                "publishedAt": "2024-10-26T10:26:55.441002Z",
+                                "likes": 33,
+                                "text": "They prefer shared breathing space."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c8",
+                        "user": "DailyDoseOfCats",
+                        "imageColor": "#8e44ad",
+                        "publishedAt": "2024-10-25T18:41:55.994113Z",
+                        "likes": 129,
+                        "text": "This popped up at exactly the right time."
+                    },
+                    {
+                        "id": "c9",
+                        "user": "PurrLogic",
+                        "imageColor": "#27ae60",
+                        "publishedAt": "2024-10-25T13:07:44.229002Z",
+                        "likes": 47,
+                        "text": "10/10 loaf form."
+                    },
+                    {
+                        "id": "c10",
+                        "user": "ScritchDealer",
+                        "imageColor": "#e84393",
+                        "publishedAt": "2024-10-25T09:54:11.554001Z",
+                        "likes": 25,
+                        "text": "That cat has zero regrets.",
+                        "replies": [
+                            {
+                                "id": "c10_r1",
+                                "user": "NoRegretLife",
+                                "imageColor": "#1abc9c",
+                                "publishedAt": "2024-10-25T10:01:22.118991Z",
+                                "likes": 11,
+                                "text": "Not even one."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "videoId": "JxS5E-kZc2s",
+                "comments": [
+                    {
+                        "id": "c1",
+                        "user": "JumpFailArchive",
+                        "imageColor": "#e74c3c",
+                        "publishedAt": "2024-10-28T08:31:14.992441Z",
+                        "likes": 388,
+                        "text": "The miscalculation 😭",
+                        "replies": [
+                            {
+                                "id": "c1_r1",
+                                "user": "PhysicsCat",
+                                "imageColor": "#3498db",
+                                "publishedAt": "2024-10-28T08:42:33.118991Z",
+                                "likes": 59,
+                                "text": "Gravity always wins."
+                            },
+                            {
+                                "id": "c1_r2",
+                                "user": "MathMeow",
+                                "imageColor": "#9b59b6",
+                                "publishedAt": "2024-10-28T08:48:10.441002Z",
+                                "likes": 23,
+                                "text": "The angle was off by 0.2 whiskers."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c2",
+                        "user": "ParkourPaws",
+                        "imageColor": "#2ecc71",
+                        "publishedAt": "2024-10-27T20:55:10.442001Z",
+                        "likes": 141,
+                        "text": "Still landed it. Judges?",
+                        "replies": [
+                            {
+                                "id": "c2_r1",
+                                "user": "JudgeJudyCat",
+                                "imageColor": "#f1c40f",
+                                "publishedAt": "2024-10-27T21:02:33.118991Z",
+                                "likes": 38,
+                                "text": "Score: 8.5 for effort."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c3",
+                        "user": "SlowMoEnjoyer",
+                        "imageColor": "#9b59b6",
+                        "publishedAt": "2024-10-27T15:22:09.661220Z",
+                        "likes": 84,
+                        "text": "This would be even better in slow motion."
+                    },
+                    {
+                        "id": "c4",
+                        "user": "CarpetClaws",
+                        "imageColor": "#f1c40f",
+                        "publishedAt": "2024-10-26T22:11:41.004113Z",
+                        "likes": 63,
+                        "text": "My cat made the same mistake yesterday.",
+                        "replies": [
+                            {
+                                "id": "c4_r1",
+                                "user": "SharedPain",
+                                "imageColor": "#34495e",
+                                "publishedAt": "2024-10-26T22:18:55.441002Z",
+                                "likes": 19,
+                                "text": "They never learn, do they?"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c5",
+                        "user": "WhiffMaster",
+                        "imageColor": "#16a085",
+                        "publishedAt": "2024-10-26T19:07:58.774331Z",
+                        "likes": 55,
+                        "text": "Confidence > accuracy.",
+                        "replies": [
+                            {
+                                "id": "c5_r1",
+                                "user": "MotivationMeow",
+                                "imageColor": "#e84393",
+                                "publishedAt": "2024-10-26T19:15:22.118991Z",
+                                "likes": 26,
+                                "text": "Words to live by."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c6",
+                        "user": "CatFailFan",
+                        "imageColor": "#e67e22",
+                        "publishedAt": "2024-10-26T12:09:21.884220Z",
+                        "likes": 102,
+                        "text": "I feel bad for laughing but also…"
+                    },
+                    {
+                        "id": "c7",
+                        "user": "SoftLanding",
+                        "imageColor": "#95a5a6",
+                        "publishedAt": "2024-10-26T08:58:19.228441Z",
+                        "likes": 29,
+                        "text": "At least it was a soft landing."
+                    },
+                    {
+                        "id": "c8",
+                        "user": "NineLives",
+                        "imageColor": "#2c3e50",
+                        "publishedAt": "2024-10-25T23:44:02.110991Z",
+                        "likes": 77,
+                        "text": "One of the nine lives used.",
+                        "replies": [
+                            {
+                                "id": "c8_r1",
+                                "user": "LifeCounter",
+                                "imageColor": "#27ae60",
+                                "publishedAt": "2024-10-25T23:51:10.441002Z",
+                                "likes": 22,
+                                "text": "Still got plenty left."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c9",
+                        "user": "JumpScareMeow",
+                        "imageColor": "#c0392b",
+                        "publishedAt": "2024-10-25T17:33:41.002991Z",
+                        "likes": 46,
+                        "text": "I gasped out loud."
+                    },
+                    {
+                        "id": "c10",
+                        "user": "CatFailsDaily",
+                        "imageColor": "#8e44ad",
+                        "publishedAt": "2024-10-25T11:05:09.551991Z",
+                        "likes": 91,
+                        "text": "Never gets old.",
+                        "replies": [
+                            {
+                                "id": "c10_r1",
+                                "user": "FailLoop",
+                                "imageColor": "#1abc9c",
+                                "publishedAt": "2024-10-25T11:12:44.118991Z",
+                                "likes": 28,
+                                "text": "Still watching every time."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "techVideos": [
+            {
+                "videoId": "TechA1X9QpE",
+                "comments": [
+                    {
+                        "id": "c1",
+                        "user": "ByteCruncher",
+                        "imageColor": "#3498db",
+                        "publishedAt": "2024-10-28T09:14:22.118441Z",
+                        "likes": 421,
+                        "text": "This actually explains it better than most docs.",
+                        "replies": [
+                            {
+                                "id": "c1_r1",
+                                "user": "ReadTheDocs",
+                                "imageColor": "#2ecc71",
+                                "publishedAt": "2024-10-28T09:37:10.774331Z",
+                                "likes": 61,
+                                "text": "Docs assume you already know everything 😅"
+                            },
+                            {
+                                "id": "c1_r2",
+                                "user": "APIDiver",
+                                "imageColor": "#9b59b6",
+                                "publishedAt": "2024-10-28T09:45:22.118991Z",
+                                "likes": 29,
+                                "text": "Real-world examples help so much more."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c2",
+                        "user": "CompileAndRun",
+                        "imageColor": "#9b59b6",
+                        "publishedAt": "2024-10-27T21:55:03.551991Z",
+                        "likes": 233,
+                        "text": "Tried this setup and my build time dropped instantly.",
+                        "replies": [
+                            {
+                                "id": "c2_r1",
+                                "user": "BuildOptimizer",
+                                "imageColor": "#1abc9c",
+                                "publishedAt": "2024-10-27T22:01:44.118991Z",
+                                "likes": 54,
+                                "text": "Same here, shaved minutes off."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c3",
+                        "user": "DarkModeOnly",
+                        "imageColor": "#2c3e50",
+                        "publishedAt": "2024-10-27T18:42:59.002991Z",
+                        "likes": 128,
+                        "text": "Dark mode users assemble."
+                    },
+                    {
+                        "id": "c4",
+                        "user": "BugChaser",
+                        "imageColor": "#e74c3c",
+                        "publishedAt": "2024-10-27T14:19:11.884220Z",
+                        "likes": 97,
+                        "text": "That one bug at 6:32 explains my entire weekend.",
+                        "replies": [
+                            {
+                                "id": "c4_r1",
+                                "user": "WeekendRuined",
+                                "imageColor": "#f39c12",
+                                "publishedAt": "2024-10-27T14:25:33.441002Z",
+                                "likes": 41,
+                                "text": "Relatable pain."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c5",
+                        "user": "DevSetupGuy",
+                        "imageColor": "#f1c40f",
+                        "publishedAt": "2024-10-26T23:07:41.210991Z",
+                        "likes": 156,
+                        "text": "Cleanest workflow I’ve seen in a while.",
+                        "replies": [
+                            {
+                                "id": "c5_r1",
+                                "user": "WorkflowWizard",
+                                "imageColor": "#8e44ad",
+                                "publishedAt": "2024-10-26T23:14:55.118991Z",
+                                "likes": 37,
+                                "text": "Agreed, super smooth setup."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c6",
+                        "user": "TerminalEnjoyer",
+                        "imageColor": "#16a085",
+                        "publishedAt": "2024-10-26T20:55:18.441002Z",
+                        "likes": 54,
+                        "text": "People sleeping on keyboard shortcuts."
+                    },
+                    {
+                        "id": "c7",
+                        "user": "CacheMiss",
+                        "imageColor": "#7f8c8d",
+                        "publishedAt": "2024-10-26T16:44:02.774331Z",
+                        "likes": 33,
+                        "text": "Explains why my app felt randomly slow.",
+                        "replies": [
+                            {
+                                "id": "c7_r1",
+                                "user": "PerfNerd",
+                                "imageColor": "#27ae60",
+                                "publishedAt": "2024-10-26T16:50:41.118991Z",
+                                "likes": 22,
+                                "text": "Caching issues are sneaky."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c8",
+                        "user": "RefactorLater",
+                        "imageColor": "#8e44ad",
+                        "publishedAt": "2024-10-26T12:18:59.118991Z",
+                        "likes": 81,
+                        "text": "Saving this for future me."
+                    },
+                    {
+                        "id": "c9",
+                        "user": "StackOverflowed",
+                        "imageColor": "#e67e22",
+                        "publishedAt": "2024-10-25T22:01:10.442001Z",
+                        "likes": 64,
+                        "text": "Wish I saw this two years ago.",
+                        "replies": [
+                            {
+                                "id": "c9_r1",
+                                "user": "SameEnergy",
+                                "imageColor": "#3498db",
+                                "publishedAt": "2024-10-25T22:08:44.118991Z",
+                                "likes": 19,
+                                "text": "Would’ve saved me so much time."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c10",
+                        "user": "MergeConflict",
+                        "imageColor": "#1abc9c",
+                        "publishedAt": "2024-10-25T18:07:44.229002Z",
+                        "likes": 47,
+                        "text": "That explanation finally made it click."
+                    }
+                ]
+            },
+            {
+                "videoId": "TechB7LQ2nZ",
+                "comments": [
+                    {
+                        "id": "c1",
+                        "user": "GadgetNerd",
+                        "imageColor": "#e84393",
+                        "publishedAt": "2024-10-28T10:02:33.992441Z",
+                        "likes": 512,
+                        "text": "Did not expect this to outperform the previous model.",
+                        "replies": [
+                            {
+                                "id": "c1_r1",
+                                "user": "SpecSheetReader",
+                                "imageColor": "#2980b9",
+                                "publishedAt": "2024-10-28T10:19:55.118991Z",
+                                "likes": 73,
+                                "text": "Benchmarks don’t lie."
+                            },
+                            {
+                                "id": "c1_r2",
+                                "user": "ThermalWatcher",
+                                "imageColor": "#c0392b",
+                                "publishedAt": "2024-10-28T10:25:41.884220Z",
+                                "likes": 29,
+                                "text": "Thermals matter more than people think."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c2",
+                        "user": "DeskSetup",
+                        "imageColor": "#27ae60",
+                        "publishedAt": "2024-10-27T19:44:10.774331Z",
+                        "likes": 209,
+                        "text": "That design is way cleaner in person.",
+                        "replies": [
+                            {
+                                "id": "c2_r1",
+                                "user": "DesignSnob",
+                                "imageColor": "#9b59b6",
+                                "publishedAt": "2024-10-27T19:51:22.118991Z",
+                                "likes": 46,
+                                "text": "Photos don’t do it justice."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c3",
+                        "user": "CableManagement",
+                        "imageColor": "#16a085",
+                        "publishedAt": "2024-10-27T15:22:41.002991Z",
+                        "likes": 142,
+                        "text": "I’m here for the cable management.",
+                        "replies": [
+                            {
+                                "id": "c3_r1",
+                                "user": "CleanDeskClub",
+                                "imageColor": "#f1c40f",
+                                "publishedAt": "2024-10-27T15:29:55.118991Z",
+                                "likes": 31,
+                                "text": "A clean desk is a happy desk."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c4",
+                        "user": "BatteryAnxiety",
+                        "imageColor": "#f39c12",
+                        "publishedAt": "2024-10-27T12:09:18.551991Z",
+                        "likes": 88,
+                        "text": "Battery life surprised me the most.",
+                        "replies": [
+                            {
+                                "id": "c4_r1",
+                                "user": "LongHaulUser",
+                                "imageColor": "#34495e",
+                                "publishedAt": "2024-10-27T12:16:41.118991Z",
+                                "likes": 27,
+                                "text": "Same, lasts me all day."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c5",
+                        "user": "DailyDriver",
+                        "imageColor": "#34495e",
+                        "publishedAt": "2024-10-26T22:31:55.441002Z",
+                        "likes": 131,
+                        "text": "Been using this for a month and no complaints."
+                    },
+                    {
+                        "id": "c6",
+                        "user": "FPSCounter",
+                        "imageColor": "#9b59b6",
+                        "publishedAt": "2024-10-26T18:02:44.118991Z",
+                        "likes": 57,
+                        "text": "Performance jump is noticeable.",
+                        "replies": [
+                            {
+                                "id": "c6_r1",
+                                "user": "FrameDrop",
+                                "imageColor": "#e84393",
+                                "publishedAt": "2024-10-26T18:09:22.441002Z",
+                                "likes": 19,
+                                "text": "Especially in heavier workloads."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c7",
+                        "user": "UpgradeOrNot",
+                        "imageColor": "#7f8c8d",
+                        "publishedAt": "2024-10-26T14:49:21.774331Z",
+                        "likes": 63,
+                        "text": "Not worth upgrading if you’re on last gen."
+                    },
+                    {
+                        "id": "c8",
+                        "user": "PortPolice",
+                        "imageColor": "#e74c3c",
+                        "publishedAt": "2024-10-26T11:05:02.229002Z",
+                        "likes": 41,
+                        "text": "Still wish it had one more port.",
+                        "replies": [
+                            {
+                                "id": "c8_r1",
+                                "user": "DongleLife",
+                                "imageColor": "#2ecc71",
+                                "publishedAt": "2024-10-26T11:12:41.118991Z",
+                                "likes": 23,
+                                "text": "Dongles forever, sadly."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c9",
+                        "user": "SpecBalance",
+                        "imageColor": "#2ecc71",
+                        "publishedAt": "2024-10-25T20:11:59.884220Z",
+                        "likes": 52,
+                        "text": "Specs are actually well balanced this time."
+                    },
+                    {
+                        "id": "c10",
+                        "user": "TechDaily",
+                        "imageColor": "#8e44ad",
+                        "publishedAt": "2024-10-25T16:43:10.442001Z",
+                        "likes": 90,
+                        "text": "Solid review. Straight to the point.",
+                        "replies": [
+                            {
+                                "id": "c10_r1",
+                                "user": "NoFluff",
+                                "imageColor": "#1abc9c",
+                                "publishedAt": "2024-10-25T16:50:33.118991Z",
+                                "likes": 28,
+                                "text": "Exactly how reviews should be."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "videoId": "TechC4MZ8Yk",
+                "comments": [
+                    {
+                        "id": "c1",
+                        "user": "AIPowerUser",
+                        "imageColor": "#1abc9c",
+                        "publishedAt": "2024-10-28T08:49:10.118991Z",
+                        "likes": 376,
+                        "text": "This tool actually fits into my workflow.",
+                        "replies": [
+                            {
+                                "id": "c1_r1",
+                                "user": "PromptTinkerer",
+                                "imageColor": "#e67e22",
+                                "publishedAt": "2024-10-28T09:01:44.774331Z",
+                                "likes": 48,
+                                "text": "Same, especially with custom prompts."
+                            },
+                            {
+                                "id": "c1_r2",
+                                "user": "FlowState",
+                                "imageColor": "#9b59b6",
+                                "publishedAt": "2024-10-28T09:08:22.118991Z",
+                                "likes": 31,
+                                "text": "Once it clicks, it’s hard to go back."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c2",
+                        "user": "AutomationFan",
+                        "imageColor": "#27ae60",
+                        "publishedAt": "2024-10-27T20:13:22.551991Z",
+                        "likes": 211,
+                        "text": "Saved me a ridiculous amount of time.",
+                        "replies": [
+                            {
+                                "id": "c2_r1",
+                                "user": "TimeSaver",
+                                "imageColor": "#34495e",
+                                "publishedAt": "2024-10-27T20:20:55.118991Z",
+                                "likes": 44,
+                                "text": "Time is the real currency."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c3",
+                        "user": "HumanInLoop",
+                        "imageColor": "#34495e",
+                        "publishedAt": "2024-10-27T17:02:11.441002Z",
+                        "likes": 109,
+                        "text": "Still needs human oversight but it’s useful.",
+                        "replies": [
+                            {
+                                "id": "c3_r1",
+                                "user": "GuardRails",
+                                "imageColor": "#f1c40f",
+                                "publishedAt": "2024-10-27T17:09:33.118991Z",
+                                "likes": 37,
+                                "text": "Human-in-the-loop is the sweet spot."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c4",
+                        "user": "WorkflowNerd",
+                        "imageColor": "#9b59b6",
+                        "publishedAt": "2024-10-27T13:44:59.774331Z",
+                        "likes": 94,
+                        "text": "The integration part is the real win here.",
+                        "replies": [
+                            {
+                                "id": "c4_r1",
+                                "user": "APILover",
+                                "imageColor": "#1abc9c",
+                                "publishedAt": "2024-10-27T13:51:44.118991Z",
+                                "likes": 28,
+                                "text": "Good integrations make or break tools."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c5",
+                        "user": "LatencyWatcher",
+                        "imageColor": "#f1c40f",
+                        "publishedAt": "2024-10-26T22:09:41.118991Z",
+                        "likes": 61,
+                        "text": "Response time is better than expected.",
+                        "replies": [
+                            {
+                                "id": "c5_r1",
+                                "user": "SpeedTester",
+                                "imageColor": "#2ecc71",
+                                "publishedAt": "2024-10-26T22:16:22.441002Z",
+                                "likes": 24,
+                                "text": "Latency makes all the difference."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c6",
+                        "user": "ModelSwitcher",
+                        "imageColor": "#16a085",
+                        "publishedAt": "2024-10-26T19:33:18.551991Z",
+                        "likes": 47,
+                        "text": "Interesting comparison between versions."
+                    },
+                    {
+                        "id": "c7",
+                        "user": "RealWorldUse",
+                        "imageColor": "#2ecc71",
+                        "publishedAt": "2024-10-26T15:01:02.229002Z",
+                        "likes": 72,
+                        "text": "Love seeing real use cases instead of hype.",
+                        "replies": [
+                            {
+                                "id": "c7_r1",
+                                "user": "NoHypeZone",
+                                "imageColor": "#8e44ad",
+                                "publishedAt": "2024-10-26T15:08:41.118991Z",
+                                "likes": 29,
+                                "text": "Practical demos > marketing."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c8",
+                        "user": "ToolCollector",
+                        "imageColor": "#7f8c8d",
+                        "publishedAt": "2024-10-26T11:27:44.884220Z",
+                        "likes": 38,
+                        "text": "Another tool added to the stack."
+                    },
+                    {
+                        "id": "c9",
+                        "user": "EfficiencyMode",
+                        "imageColor": "#2980b9",
+                        "publishedAt": "2024-10-25T21:55:10.441002Z",
+                        "likes": 66,
+                        "text": "Small gains but they add up.",
+                        "replies": [
+                            {
+                                "id": "c9_r1",
+                                "user": "CompoundEffect",
+                                "imageColor": "#27ae60",
+                                "publishedAt": "2024-10-25T22:01:44.118991Z",
+                                "likes": 21,
+                                "text": "1% better every day."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c10",
+                        "user": "PracticalTech",
+                        "imageColor": "#e84393",
+                        "publishedAt": "2024-10-25T17:19:03.774331Z",
+                        "likes": 83,
+                        "text": "Finally a grounded take."
+                    }
+                ]
+            }
+        ]
+    }
+]
