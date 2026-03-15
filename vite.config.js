@@ -7,7 +7,6 @@ export default defineConfig({
     include: [
       "@fortawesome/react-fontawesome",
       "@fortawesome/free-solid-svg-icons",
-      "@fortawesome/free-regular-svg-icons",
       "@fortawesome/free-brands-svg-icons"
     ],
   },
@@ -15,7 +14,6 @@ export default defineConfig({
     noExternal: [
       "@fortawesome/react-fontawesome",
       "@fortawesome/free-solid-svg-icons",
-      "@fortawesome/free-regular-svg-icons",
       "@fortawesome/free-brands-svg-icons"
     ]
   }

@@ -58,7 +58,7 @@
     display: flex;
 }
 
-.searchBar.mquery {
+.searchBar.mobileVariant {
     display: none;
 }
 
@@ -71,7 +71,7 @@
         display: none;
     }
 
-    .searchBar.mquery {
+    .searchBar.mobileVariant {
         display: flex;
         width: 100%;
     }

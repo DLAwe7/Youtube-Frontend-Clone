@@ -8,7 +8,7 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faSquareYoutube } from '@fortawesome/free-brands-svg-icons';
 import "./Sidebar.css"
 import Logo from './Logo';
-import HamburguerMenu from "./Buttons/Hamburguer"
+import HamburguerMenu from "./Buttons/HamburguerMenu"
 import { useRef } from 'react';
 import { useSidebar } from '../hooks/useSidebar';
 import { channelsToFetch } from '../data/videosData';
@@ -74,7 +74,7 @@ function Sidebar() {
 
     const channelIds = channelsToFetch.map(channel => channel.channelId);
 
-    const { data: channelsData = [], isError, isLoading, error } = useChannel(channelIds);
+    const { data: channelsData = [] } = useChannel(channelIds);
 
 
     const thirdLiSet = channelsData.map(channel => {
@@ -111,9 +111,6 @@ function Sidebar() {
 
 
     ];
-
-    if (isLoading) return <ListVideoSkeleton count={1} size={"long"} />;
-    if (isError) return <p>Error: {error.message}</p>;
 
     return <FocusScope loop trapped={isOpen} disabled={!isOpen}>
 
@@ -234,7 +231,7 @@ function Sidebar() {
 
                             <li key={item.id} className="sidebar-list-btn">
 
-                                <a className='sidebar-channels-anchor' href={`https://www.youtube.com/channel/${item.id}`} target='_blank'>
+                                <a className='sidebar-channels-anchor' href={`https://www.youtube.com/channel/${item.id}`} rel="noopener noreferrer" target='_blank'>
 
 
                                     <div className='sidebar-image-wrapper'>

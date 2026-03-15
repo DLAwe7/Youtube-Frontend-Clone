@@ -53,8 +53,7 @@ function CommentCard({ commentsData, setCommentToReply, commentToReply, appendCo
         let nextDisliked = false;
 
         if (isDisliked) {
-            if (newLikes !== 0) newLikes += 1;
-
+            newLikes += 1;
         } else if (isLiked) {
             newLikes -= 2;
             nextDisliked = true;
@@ -62,8 +61,6 @@ function CommentCard({ commentsData, setCommentToReply, commentToReply, appendCo
             newLikes -= 1;
             nextDisliked = true;
         }
-
-        newLikes = Math.max(0, newLikes);
 
         setReactions(prev => ({
             ...prev,
@@ -87,6 +84,7 @@ function CommentCard({ commentsData, setCommentToReply, commentToReply, appendCo
         const replyId = `reply-${comment.id}-${level}`;
         const isCommentOpen = !!openReplies[comment.id];
         const reaction = getReactionState(comment.id, comment.likes);
+        const displayedLikes = Math.max(0, reaction.likes);
 
         return (
             <div
@@ -103,7 +101,7 @@ function CommentCard({ commentsData, setCommentToReply, commentToReply, appendCo
                     userName={comment.user}
                     publishedAt={comment.publishedAt}
                     text={comment.text}
-                    likes={reaction.likes}
+                    likes={displayedLikes}
                     isLiked={reaction.liked}
                     isDisliked={reaction.disliked}
                     likeToggle={() =>
@@ -141,7 +139,7 @@ function CommentCard({ commentsData, setCommentToReply, commentToReply, appendCo
                                 isOpen={isCommentOpen}
                                 toggle={() => toggleReplies(comment.id)}
                                 controlsId={replyId}
-                                aria-label={`${comment.replies.length} replies. Show replies.`}
+                                ariaLabel={`${comment.replies.length} replies. Show replies.`}
                                 level={level}
                             >
                                 <FontAwesomeIcon icon={faChevronDown} aria-hidden="true" />
@@ -165,7 +163,7 @@ function CommentCard({ commentsData, setCommentToReply, commentToReply, appendCo
                                 isOpen={isCommentOpen}
                                 toggle={() => toggleReplies(comment.id)}
                                 controlsId={replyId}
-                                aria-label={`${comment.replies.length} replies. Hide replies.`}
+                                ariaLabel={`${comment.replies.length} replies. Hide replies.`}
                                 level={level + 1}
                             >
                                 <FontAwesomeIcon icon={faChevronUp} aria-hidden="true" />

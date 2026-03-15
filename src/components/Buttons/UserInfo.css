@@ -59,9 +59,10 @@
     font-size: 16px;
 }
 
-.user-info-text a {
+.user-info-text button {
     font-size: 14px;
     color: #3EA6FF;
+    background: none;
 }
 
 .user-info-card {

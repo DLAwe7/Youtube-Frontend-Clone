@@ -1,10 +1,12 @@
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./Logo.css"
+import { Link } from 'react-router-dom';
 
 
 
-function logo() {
+
+function Logo() {
 
 
 
@@ -13,7 +15,7 @@ function logo() {
 
     return <div>
 
-        <a className="youtube-icon" href="/home">
+        <Link to="/home" className="youtube-icon" >
 
             <FontAwesomeIcon icon={faYoutube} className="youtube-logo" />
             <span className="youtube-name">YouTube</span>
@@ -24,7 +26,7 @@ function logo() {
 
             </span>
 
-        </a>
+        </Link>
 
 
 
@@ -34,4 +36,4 @@ function logo() {
 
 }
 
-export default logo
+export default Logo

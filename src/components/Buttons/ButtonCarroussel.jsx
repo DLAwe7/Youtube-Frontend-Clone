@@ -1,26 +1,23 @@
-import { ToggleButton } from "../ToggleButton";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { useClickOutside } from "../../hooks/useClickOutside"
 import { useEscKeyDown } from "../../hooks/useEscKeyDown"
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import "./ButtonCarroussel.css";
 import { useToast } from "../../contexts/ToastContext";
 
 
 
-function ButtonCarroussel({ mquery, context }) {
+function ButtonCarroussel({ mobileVariant, context }) {
 
     const [activeButtonId, setActiveButtonId] = useState(null);
 
-
-    const [swiperInstance, setSwiperInstance] = useState(null);
     const [canScrollPrev, setCanScrollPrev] = useState(false);
     const [canScrollNext, setCanScrollNext] = useState(false);
 
     const containerRef = useRef(null);
+    const scrollRef = useRef(null);
+
 
     const { toastId, showToast } = useToast();
 
@@ -37,6 +34,8 @@ function ButtonCarroussel({ mquery, context }) {
     ];
 
 
+
+
     useClickOutside({
         refs: [containerRef],
         enabled: activeButtonId !== null,
@@ -49,101 +48,85 @@ function ButtonCarroussel({ mquery, context }) {
 
     useEscKeyDown(activeButtonId, () => { setActiveButtonId(null); });
 
-    const updateButtons = (swiper = swiperInstance) => {
-        if (!swiper) return;
-        setCanScrollPrev(!swiper.isBeginning);
-        setCanScrollNext(!swiper.isEnd);
+    const updateButtons = () => {
+        const el = scrollRef.current;
+        if (!el) return;
+
+        const maxScrollLeft = el.scrollWidth - el.clientWidth;
+        const tolerance = 2;
+
+        setCanScrollPrev(el.scrollLeft > tolerance);
+        setCanScrollNext(el.scrollLeft < maxScrollLeft - tolerance);
     };
 
-    const scrollNext = () => {
-        if (!swiperInstance) return;
+    const scrollByAmount = (direction) => {
+        const el = scrollRef.current;
+        if (!el) return;
 
-        const slidesToMove = window.innerWidth < 768 ? 2 : 3;
+        const amount = el.clientWidth * 0.7;
 
-        const nextIndex = Math.min(
-            swiperInstance.activeIndex + slidesToMove,
-            swiperInstance.slides.length - 1
-        );
-
-        swiperInstance.slideTo(nextIndex);
+        el.scrollBy({
+            left: direction === "next" ? amount : -amount,
+            behavior: "smooth",
+        });
     };
 
-    const scrollPrev = () => {
-        if (!swiperInstance) return;
+    useEffect(() => {
+        updateButtons();
 
-        const slidesToMove = window.innerWidth < 768 ? 2 : 3;
+        const el = scrollRef.current;
+        if (!el) return;
 
-        const prevIndex = Math.max(
-            swiperInstance.activeIndex - slidesToMove,
-            0
-        );
+        el.addEventListener("scroll", updateButtons);
+        window.addEventListener("resize", updateButtons);
 
-        swiperInstance.slideTo(prevIndex);
-    };
+        return () => {
+            el.removeEventListener("scroll", updateButtons);
+            window.removeEventListener("resize", updateButtons);
+        };
+    }, []);
 
 
     return (
-        <div className={`button-carroussel ${mquery ? mquery : ""} ${context ? context : ""}`} ref={containerRef}>
+        <div
+            className={`button-carroussel ${mobileVariant ?? ""} ${context ?? ""}`}
+            ref={containerRef}
+        >
+            {canScrollPrev && (
+                <button
+                    className="directional-button"
+                    onClick={() => scrollByAmount("prev")}
+                    aria-label="Scroll left"
+                >
+                    <FontAwesomeIcon icon={faAngleLeft} aria-hidden="true" />
+                </button>
+            )}
 
-            {canScrollPrev && <button
-                className={`directional-button ${!canScrollPrev ? "disabled" : ""}`}
-                onClick={() => scrollPrev()}
-                aria-label="directional-arrow-left"
-                aria-hidden={!canScrollPrev}
-                aria-pressed={"left directional arrow"}
-
-            >
-
-                <FontAwesomeIcon icon={faAngleLeft} aria-hidden="true" />
-
-            </button>}
-
-            <Swiper
-                slidesPerView="auto"
-                freeMode={{
-                    enabled: true,
-                    momentum: false
-                }}
-                spaceBetween={10}
-                className="carroussel-button-container"
-                onSwiper={(swiper) => {
-                    setSwiperInstance(swiper);
-                    updateButtons(swiper);
-                }}
-                onSlideChange={(swiper) => updateButtons(swiper)}
-                onSetTranslate={(swiper) => updateButtons(swiper)}
-                onReachBeginning={(swiper) => updateButtons(swiper)}
-                onReachEnd={(swiper) => updateButtons(swiper)}>
-
+            <div className="carroussel-button-container" ref={scrollRef}>
                 {items.map((item) => (
-                    <SwiperSlide key={item.id} style={{ width: "max-content" }}>
-
-                        <button
-                            className={item.className}
-                            onClick={() => { setActiveButtonId(prev => prev === item.id ? null : item.id); showToast("🎬 Demo Mode: This feature is not connected to a backend.") }}
-                            aria-controls={toastId}
-                        >
-                            <span>{item.label}</span>
-                        </button>
-
-                    </SwiperSlide>
+                    <button
+                        key={item.id}
+                        className={item.className}
+                        onClick={() => {
+                            setActiveButtonId((prev) => (prev === item.id ? null : item.id));
+                            showToast("🎬 Demo Mode: This feature is not connected to a backend.");
+                        }}
+                        aria-controls={toastId}
+                    >
+                        <span>{item.label}</span>
+                    </button>
                 ))}
+            </div>
 
-            </Swiper>
-
-            {canScrollNext && <button
-                className={`directional-button ${!canScrollNext ? "disabled" : ""}`}
-                onClick={() => scrollNext()}
-                aria-label="directional-arrow-right"
-                aria-hidden={!canScrollNext}
-                aria-pressed={"right directional arrow"}
-            >
-                <FontAwesomeIcon icon={faAngleRight} aria-hidden="true" />
-            </button>}
-
-
-
-
+            {canScrollNext && (
+                <button
+                    className="directional-button"
+                    onClick={() => scrollByAmount("next")}
+                    aria-label="Scroll right"
+                >
+                    <FontAwesomeIcon icon={faAngleRight} aria-hidden="true" />
+                </button>
+            )}
         </div>
     );
 }

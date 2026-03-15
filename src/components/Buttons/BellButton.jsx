@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faGear } from '@fortawesome/free-solid-svg-icons';
 import "./BellButton.css"
 import { useState } from 'react';
-import { ToggleButton } from '../ToggleButton';
 import { useClickOutside } from "../../hooks/useClickOutside"
 import { useEscKeyDown } from "../../hooks/useEscKeyDown"
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll';
@@ -62,7 +61,7 @@ function BellButton() {
 
     <div className="bell-wrapper">
 
-      <button ref={refs.setReference} className={"bell-button"} aria-haspopup="true" aria-expanded={isOpen} onClick={toggle} aria-controls={"notifications-list-wrapper"} aria-label="Notifications Menu">
+      <button ref={refs.setReference} className={"bell-button"} aria-haspopup="menu" aria-expanded={isOpen} onClick={toggle} aria-controls={"notifications-list-wrapper"} aria-label="Notifications Menu">
 
         <FontAwesomeIcon icon={faBell} aria-hidden="true" />
 
@@ -99,12 +98,12 @@ function BellButton() {
 
                   <li className='notifications-li' key={card.id}>
 
-                    <ToggleButton className={"notifications-li-btn"} isOpen={card.isOpen} toggle={card.toggle} controlsId={card.id}>
+                    <button className={"notifications-li-btn"} aria-expanded={card.isOpen} onClick={() => card.toggle()} aria-controls={card.id}>
 
                       <FontAwesomeIcon icon={card.icon} aria-hidden="true" />
                       <span>{card.text}</span>
 
-                    </ToggleButton>
+                    </button>
 
                   </li>
 

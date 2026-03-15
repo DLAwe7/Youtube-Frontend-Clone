@@ -4,11 +4,10 @@ import { useChannel } from "../utils/useVideos";
 
 export function UserProvider({ children, defaultChannelId }) {
     const { data: channelArray, isLoading, error } = useChannel(
-        defaultChannelId ? [defaultChannelId] : [],
-        { enabled: !!defaultChannelId }
+        defaultChannelId ? [defaultChannelId] : []
     );
 
-    const channel = channelArray?.[0] ?? null; // 👈 normalize here
+    const channel = channelArray?.[0] ?? null;
 
     return (
         <UserContext.Provider value={{ data: channel, isLoading, error }}>

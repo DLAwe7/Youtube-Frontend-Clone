@@ -6,7 +6,6 @@ function useArrowNavigation(enabled, containerRef, loop = true) {
         const el = containerRef.current;
         if (!el) return;
 
-        // Find focusable elements
         const focusableSelectors = [
             'button:not([disabled])',
             '[href]',

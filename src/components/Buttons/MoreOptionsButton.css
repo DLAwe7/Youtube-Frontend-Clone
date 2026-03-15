@@ -10,10 +10,16 @@
     border-radius: 50%;
 }
 
-.more-options-button.secondarySection {
+.more-options-wrapper.secondarySection .more-options-button {
     position: absolute;
     top: -5px;
-    right: 0px;
+    right: 0;
+}
+
+.more-options-wrapper.secondarySection .more-options-button {
+    position: absolute;
+    top: -5px;
+    right: 0;
 }
 
 
@@ -64,12 +70,19 @@
 
 }
 
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+}
+
 @media(max-width: 1050px) {
-
-
 
     .more-options-wrapper.secondarySection {
         display: flex;
     }
+
 
 }

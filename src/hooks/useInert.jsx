@@ -11,10 +11,9 @@ export function useInert(ref, inert) {
                 focused.blur();
             }
             ref.current.setAttribute("inert", "");
-            ref.current.setAttribute("aria-hidden", "true");
         } else {
             ref.current.removeAttribute("inert");
-            ref.current.removeAttribute("aria-hidden");
+
         }
     }, [ref, inert]);
 }

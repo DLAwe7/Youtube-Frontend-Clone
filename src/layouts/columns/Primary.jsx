@@ -12,7 +12,7 @@ function Primary({ data, channel, videos }) {
 
         <Video data={data} channel={channel} />
         <Description data={data} channel={channel} />
-        <Secondary videos={videos} mquery={"mquery"} layout={"grid"} />
+        <Secondary videos={videos} mobileVariant={"mobileVariant"} layout={"grid"} />
         <Comments data={data} />
 
     </div>

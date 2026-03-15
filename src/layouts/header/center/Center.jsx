@@ -14,7 +14,7 @@ function Center({ isSearchbarOpen, setIsSearchbarOpen }) {
 
         <SearchBar id={searchbarId} />
 
-        <button className="conditional-searchbar-btn" onClick={() => setIsSearchbarOpen(true)} aria-controls={searchbarId} aria-expanded={isSearchbarOpen} aria-label="Close searchbar button">
+        <button className="conditional-searchbar-btn" onClick={() => setIsSearchbarOpen(true)} aria-controls={searchbarId} aria-expanded={isSearchbarOpen} aria-label="Open search">
 
             <FontAwesomeIcon icon={faMagnifyingGlass} aria-hidden="true" />
 

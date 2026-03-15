@@ -1,9 +1,6 @@
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./MoreOptionsButton.css";
-import { ToggleButton } from '../ToggleButton';
-import { useState } from 'react';
-import { useClickOutside } from "../../hooks/useClickOutside"
 import { useEscKeyDown } from "../../hooks/useEscKeyDown"
 import { useToast } from '../../contexts/ToastContext';
 import { createPortal } from 'react-dom';
@@ -16,12 +13,7 @@ import useArrowNavigation from '../../hooks/useArrowNavigation';
 
 
 
-function MoreOptionsButton({ context, variant, layout }) {
-
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggle = () => setIsOpen(prev => !prev);
+function MoreOptionsButton({ variantClasses = "", variant, isMenuOpen, onToggleMenu, onCloseMenu, menuId }) {
 
     const { toastId, showToast } = useToast();
 
@@ -35,166 +27,83 @@ function MoreOptionsButton({ context, variant, layout }) {
         whileElementsMounted: autoUpdate,
     });
 
-    useLockBodyScroll(isOpen);
+    useLockBodyScroll(isMenuOpen);
 
+    useEscKeyDown(isMenuOpen, () => {
 
-    useClickOutside({
-        refs: [refs.reference, refs.floating],
-        enabled: isOpen,
-        onOutside: () => {
-            setIsOpen(false);
-
-        }
-    });
-
-
-    useEscKeyDown(isOpen, () => {
-
-        setIsOpen(false);
+        onCloseMenu();
 
 
     });
 
 
-    useAutoFocusOnOpen(isOpen, refs.floating);
-    useRestoreFocus(isOpen, refs.reference);
-    useArrowNavigation(isOpen, refs.floating)
+    useAutoFocusOnOpen(isMenuOpen, refs.floating);
+    useRestoreFocus(isMenuOpen, refs.reference);
+    useArrowNavigation(isMenuOpen, refs.floating);
+
+
+    const buttonsList = [{ id: "addtoqueue", title: "Add to queue", }, { id: "savetowatchlater", title: "Save to Watch later", },
+    { id: "savetoplaylist", title: "Save to playlist", }, { id: "moreoptionsdownload", title: "Download", }, { id: "moreoptionsshare", title: "Share", },
+    { id: "moreoptionsnointerested", title: "Not interested", }, { id: "moreoptionsdontrecommend", title: "Don't recommend channel", },
+    { id: "moreoptionsreport", title: "Report", },]
+
+
+
 
     return (
 
 
-        <div className={`more-options-wrapper ${context ? context : ""} ${variant ? variant : ""}`} role='menu'>
+        <div className={`more-options-wrapper ${variantClasses} ${variant ? variant : ""}`}>
 
-            <ToggleButton ref={refs.setReference} className={"more-options-button"} isOpen={isOpen} toggle={toggle} controlsId={"more-options-menu"} aria-label="More options button" stopPropagation={true}>
+            <button ref={refs.setReference} className={`more-options-button`} aria-expanded={isMenuOpen} onClick={(e) => { e.stopPropagation(); e.preventDefault(); onToggleMenu(); }} aria-controls={`more-options-menu-${menuId}`}
+                aria-label="More options button">
 
                 <FontAwesomeIcon icon={faEllipsisVertical} aria-hidden="true" className='mopt-btn-icon' />
 
-            </ToggleButton>
+            </button >
 
-            {isOpen && createPortal(
+            {isMenuOpen && createPortal(
 
-                <FocusScope loop trapped>
+                <>
 
-                    <ul className={`more-options-container ${layout ? layout : ""}`} id='more-options-menu' ref={refs.setFloating} style={floatingStyles}>
+                    <div
+                        className="menu-overlay"
+                        onClick={(e) => { e.stopPropagation(); onCloseMenu(); }}
+                    />
 
-                        <li className="more-options-li" role='none'>
+                    <FocusScope loop trapped>
 
-                            <button role='menuitem' className={""} onClick={(e) => { e.stopPropagation(); showToast("🎬 Demo Mode: This feature is not connected to a backend."); }} aria-controls={toastId} >
+                        <ul role='menu' className={`more-options-container ${variantClasses}`} id={`more-options-menu-${menuId}`} ref={refs.setFloating} style={floatingStyles}>
 
-                                <span aria-hidden="true">Add to queue</span>
+                            {buttonsList.map((button) => (
 
-                            </button>
+                                <li className="more-options-li" role='none' key={button.id}>
 
-                        </li>
+                                    <button role='menuitem' className={""} onClick={(e) => { e.stopPropagation(); showToast("🎬 Demo Mode: This feature is not connected to a backend."); onCloseMenu(); }} aria-controls={toastId} >
 
-                        <li className="more-options-li" role='none'>
+                                        <span>{button.title}</span>
 
-                            <button role='menuitem' className={""} onClick={(e) => { e.stopPropagation(); showToast("🎬 Demo Mode: This feature is not connected to a backend."); }} aria-controls={toastId} >
+                                    </button>
 
-                                <span aria-hidden="true">Save to Watch later</span>
-
-                            </button>
-
-                        </li>
-
-
-                        <li className="more-options-li" role='none'>
-
-                            <button role='menuitem' className={""} onClick={(e) => { e.stopPropagation(); showToast("🎬 Demo Mode: This feature is not connected to a backend."); }} aria-controls={toastId} >
+                                </li>
 
 
+                            ))}
 
-                                <span aria-hidden="true">Save to playlist</span>
-
-                            </button>
-
-                        </li>
-
-                        <li className="more-options-li" role='none'>
-
-                            <button role='menuitem' className={""} onClick={(e) => { e.stopPropagation(); showToast("🎬 Demo Mode: This feature is not connected to a backend."); }} aria-controls={toastId} >
+                        </ul>
 
 
-                                <span aria-hidden="true">Download</span>
-
-                            </button>
-
-                        </li>
+                    </FocusScope>
 
 
-                        <li className="more-options-li" role='none'>
+                </>, document.body
 
-                            <button role='menuitem' className={""} onClick={(e) => { e.stopPropagation(); showToast("🎬 Demo Mode: This feature is not connected to a backend."); }} aria-controls={toastId}>
-
-
-                                <span aria-hidden="true">Share</span>
-
-                            </button>
-
-                        </li>
-
-
-                        <li className="more-options-li" role='none'>
-
-                            <button role='menuitem' className={""} onClick={(e) => { e.stopPropagation(); showToast("🎬 Demo Mode: This feature is not connected to a backend."); }} aria-controls={toastId}>
-
-
-
-                                <span aria-hidden="true">Not interested</span>
-
-                            </button>
-
-                        </li>
-
-
-                        <li className="more-options-li" role='none'>
-
-                            <button role='menuitem' className={""} onClick={(e) => { e.stopPropagation(); showToast("🎬 Demo Mode: This feature is not connected to a backend."); }} aria-controls={toastId} >
-
-
-
-                                <span aria-hidden="true">Don't recommend channel</span>
-
-                            </button>
-
-                        </li>
-
-
-                        <li className="more-options-li" role='none'>
-
-                            <button role='menuitem' className={""} onClick={(e) => { e.stopPropagation(); showToast("🎬 Demo Mode: This feature is not connected to a backend."); }} aria-controls={toastId} >
-
-                                <span aria-hidden="true">Report</span>
-
-                            </button>
-
-                        </li>
-
-                    </ul>
-
-
-                </FocusScope>, document.body)
-
+            )
 
 
             }
 
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div >
     )
 
 

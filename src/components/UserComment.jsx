@@ -1,5 +1,4 @@
 import "./UserComment.css"
-import { ToggleButton } from "./ToggleButton"
 import { useUser } from "../hooks/useUser";
 import { useState } from "react";
 
@@ -27,7 +26,7 @@ function UserComment({ id, level, isReply, appendComment, insertReply, setCommen
         const newComment = {
 
             id: generateUniqueId(),
-            user: data.snippet.title,
+            user: data?.snippet?.title ?? "User",
             imageColor: "hsl(199, 89%, 49%)",
             publishedAt: new Date().toISOString(),
             likes: 0,
@@ -52,7 +51,7 @@ function UserComment({ id, level, isReply, appendComment, insertReply, setCommen
     }
 
 
-    if (isLoading) return <p>Loading main video...</p>;
+    if (isLoading) return <p>Loading user...</p>;
     if (error) return <p>Error: {error.message}</p>;
 
 
@@ -86,7 +85,7 @@ function UserComment({ id, level, isReply, appendComment, insertReply, setCommen
 
                 <div className="cancel-add-button-container">
 
-                    <button type="button" className={"cancel-button"} onClick={() => { setIsCommentFocused(false); setLocalValue(""); setCommentToReply(false); }}>
+                    <button type="button" className={"cancel-button"} onClick={() => { setIsCommentFocused(false); setLocalValue(""); setCommentToReply(null); }}>
 
                         <span>Cancel</span>
 
@@ -94,7 +93,7 @@ function UserComment({ id, level, isReply, appendComment, insertReply, setCommen
 
                     <button className={"add-comment-button"} type="submit">
 
-                        <span>Add a comment</span>
+                        <span>{isReply ? "Reply" : "Add a comment"}</span>
 
                     </button>
 

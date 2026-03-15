@@ -44,7 +44,7 @@
 }
 
 .channel-image-container,
-.user-temp-img {
+.user-channel-img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -226,7 +226,7 @@
     flex-shrink: 0;
 }
 
-.list-video.mquery {
+.list-video.mobileVariant {
     display: none;
 }
 
@@ -256,7 +256,7 @@
 
     }
 
-    .list-video.mquery {
+    .list-video.mobileVariant {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         justify-content: start;
@@ -281,7 +281,7 @@
 
 }
 
-.secondary.mquery {
+.secondary.mobileVariant {
     width: 100%;
     padding: 0;
 }
@@ -308,7 +308,7 @@
     }
 
     .channel-image-container,
-    .user-temp-img {
+    .user-channel-img {
         width: 30px;
         height: 30px;
         border-radius: 50%;

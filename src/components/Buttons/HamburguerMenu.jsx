@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import "./Hamburguer.css"
-import { ToggleButton } from '../ToggleButton';
 import { useSidebar } from '../../hooks/useSidebar';
 import { forwardRef } from 'react';
 
@@ -11,17 +10,17 @@ const HamburguerMenu = forwardRef((props, ref) => {
     const { isSidebarOpen, toggleSidebar } = useSidebar();
 
     return (
-        <ToggleButton
+        <button
+            {...props}
             ref={ref}
             className="hamburguer-menu"
-            isOpen={isSidebarOpen}
-            toggle={toggleSidebar}
-            controlsId="main-sidebar"
+            aria-expanded={isSidebarOpen}
+            onClick={() => toggleSidebar()}
+            aria-controls="main-sidebar"
             aria-label={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
-            {...props}
         >
             <FontAwesomeIcon icon={faBars} aria-hidden="true" />
-        </ToggleButton>
+        </button>
     );
 });
 

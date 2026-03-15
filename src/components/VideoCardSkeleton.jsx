@@ -1,16 +1,14 @@
+import useMediaQuery from "../hooks/useMediaQuery";
+import SkeletonDesktop from "./SkeletonDesktop";
+import SkeletonMobile from "./SkeletonMobile";
 import "./VideoCardSkeleton.css"
 
 
 function VideoCardSkeleton() {
-    return (
-        <div className="list-video-card skeleton">
-            <div className="thumbnail-wrapper skeleton-box" />
-            <div className="list-video-info">
-                <div className="skeleton-line title" />
-                <div className="skeleton-line channel" />
-            </div>
-        </div>
-    );
+
+    const isMobile = useMediaQuery("(max-width: 900px)")
+
+    return isMobile ? (<SkeletonMobile />) : (<SkeletonDesktop />);
 }
 
 export default VideoCardSkeleton

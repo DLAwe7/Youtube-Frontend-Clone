@@ -95,9 +95,9 @@ function UserInfo() {
 
         <div className='user-info-wrapper'>
 
-            <button aria-haspopup="true" ref={refs.setReference} className={"userImage-button"} aria-expanded={isOpen} onClick={toggle} aria-controls={"user-settings-dropdown"} aria-label="User settings Menu">
+            <button aria-haspopup="menu" ref={refs.setReference} className={"userImage-button"} aria-expanded={isOpen} onClick={toggle} aria-controls={"user-settings-dropdown"} aria-label="User settings menu">
 
-                {user && <img src={user.snippet?.thumbnails?.default?.url} alt="user profile image" className="user-image" aria-hidden="true" />}
+                {user && <img src={user.snippet?.thumbnails?.default?.url} alt="*" className="user-image" aria-hidden="true" />}
 
             </button>
 
@@ -115,7 +115,7 @@ function UserInfo() {
 
                                 <span>{user.snippet?.title}</span>
                                 <span>@{user.snippet?.title}</span>
-                                <a href="#">Show your channel</a>
+                                <button onClick={() => showToast("🎬 Demo Mode: This feature is not connected to a backend.")}>Show your channel</button>
 
                             </div>
 
@@ -146,37 +146,6 @@ function UserInfo() {
 
                             ))}
 
-                            <li className='user-info-card' role="none">
-
-                                <button role="menuitem" className={""} onClick={() => showToast("🎬 Demo Mode: This feature is not connected to a backend.")} aria-controls={toastId}>
-
-                                    <div className=''>
-
-                                        <FontAwesomeIcon icon={faQuestion} aria-hidden="true" className="user-info-icon" />
-
-                                    </div>
-
-                                    <span>Help</span>
-
-                                </button>
-
-                            </li>
-
-                            <li className='user-info-card' role="none">
-
-                                <button role="menuitem" className={""} onClick={() => showToast("🎬 Demo Mode: This feature is not connected to a backend.")} aria-controls={toastId}>
-
-                                    <div className=''>
-
-                                        <FontAwesomeIcon icon={faMessage} aria-hidden="true" className="user-info-icon" />
-
-                                    </div>
-
-                                    <span>Send suggestions</span>
-
-                                </button>
-
-                            </li>
 
                         </ul>
 

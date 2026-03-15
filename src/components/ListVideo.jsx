@@ -1,42 +1,44 @@
+import { useState } from "react";
 import ListVideoCard from "../components/ListVideoCard"
-import { formatCount, timeAgo } from "../utils/formatters";
-
 import "./ListVideo.css"
 
 
-function ListVideo({ videos, mquery, context, layout }) {
+function ListVideo({ videos, mobileVariant, context, layout }) {
 
+    const [openMenuId, setOpenMenuId] = useState(null);
+
+    const menuConfig =
+        context === "secondarySection"
+            ? { showMoreButton: true, menuPosition: "outside" }
+            : { showMoreButton: true, menuPosition: "inside" };
+
+
+    const variantClasses = [mobileVariant, layout, context].filter(Boolean).join(" ");
 
 
     return (
 
         <div className="li-vid-wrapper">
 
-            <ul className={`list-video ${mquery ? mquery : ""} ${layout ? layout : ""} ${context ? context : ""}`}>
+            <ul className={`list-video ${variantClasses}`}>
 
-                {videos.map((video) => (
+                {(videos ?? []).map((video) => (
 
                     <ListVideoCard
 
                         key={video.id}
-                        thumbnail={video.snippet.thumbnails.medium.url}
-                        videoTitle={video.snippet.title}
-                        channelName={video.snippet.channelTitle}
-                        views={formatCount(video.statistics.viewCount, "views")}
-                        publishDate={timeAgo(video.snippet.publishedAt)}
-                        videoId={video.id}
-                        context={context}
-                        layout={layout}
-                    >
-
-
-                    </ListVideoCard>
-
+                        menuId={video.id}
+                        video={video}
+                        variantClasses={variantClasses}
+                        isMenuOpen={openMenuId === video.id}
+                        onToggleMenu={() => setOpenMenuId((prev) => (prev === video.id ? null : video.id))}
+                        onCloseMenu={() => setOpenMenuId(null)}
+                        {...menuConfig}
+                    />
 
                 ))}
 
             </ul>
-
 
 
         </div>

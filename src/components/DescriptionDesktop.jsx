@@ -1,7 +1,5 @@
-import { useRef } from "react";
 import { formatCount, timeAgo } from "../utils/formatters";
 import Channel from "./Channel";
-import { ToggleButton } from "./ToggleButton";
 import ActionButtonList from "./ActionButtonList";
 import ButtonsStorage from "./Buttons/ButtonsStorage";
 
@@ -25,10 +23,8 @@ function DescriptionDesktop({
     menuRef,
     data,
     channel,
+    descriptionRef
 }) {
-
-
-    const descriptionRef = useRef(null);
 
     return (<div id="description-anchor" ref={wrapperRef}>
 
@@ -122,11 +118,11 @@ function DescriptionDesktop({
 
                 (
 
-                    <ToggleButton className={"show-less-button"} isOpen={isOpen} toggle={toggleDescription} controlsId={"video-description"}>
+                    <button className={"show-less-button"} aria-expanded={isOpen} onClick={() => toggleDescription()} aria-controls={"video-description"}>
 
                         <span>Show less</span>
 
-                    </ToggleButton>
+                    </button>
                 )}
 
         </div>

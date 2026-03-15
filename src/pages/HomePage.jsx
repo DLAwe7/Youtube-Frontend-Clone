@@ -8,6 +8,7 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import ButtonCarroussel from "../components/Buttons/ButtonCarroussel";
 import ShortsListVideo from "../components/ShortsListVideo";
 import ListVideoSkeleton from "../components/ListVideoSkeleton";
+import PageFeedback from "../components/PageFeedback";
 
 const FIRST_ROW_COUNT = 3;
 
@@ -27,7 +28,13 @@ function HomePage() {
         []
     );
 
-    const { data: homeVideos = [], isLoading, isError, error } = useVideos(shuffledVideos);
+    const {
+        data: homeVideos = [],
+        isLoading,
+        isError,
+        refetch: refetchVideos,
+    } = useVideos(shuffledVideos);
+
     const { data: homeShorts = [], } = useVideos(shuffledShorts);
 
     const firstRowVideos = useMemo(
@@ -44,7 +51,16 @@ function HomePage() {
 
 
     if (isLoading) return <ListVideoSkeleton count={FIRST_ROW_COUNT} />;
-    if (isError) return <p>Error: {error.message}</p>;
+    if (isError) {
+        return (
+            <PageFeedback
+                title="Couldn't load videos"
+                message="Please try again."
+                actionLabel="Retry"
+                onAction={() => refetchVideos()}
+            />
+        );
+    }
 
 
     return (
@@ -61,7 +77,6 @@ function HomePage() {
             </div>
 
 
-
             <ListVideo videos={firstRowVideos} layout="horizontal" context="home" />
 
             <div className="home-shorts-divisor"><FontAwesomeIcon icon={faYoutube} /><span>Shorts</span></div>
@@ -71,12 +86,7 @@ function HomePage() {
             <ListVideo videos={remainingVideos} layout="grid" context="home" />
 
 
-
-
-
         </main>
-
-
 
 
     )

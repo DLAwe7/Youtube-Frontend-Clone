@@ -4,12 +4,12 @@ import "../../components/ListVideo.css"
 
 
 
-function Secondary({ videos, mquery, context, layout }) {
+function Secondary({ videos, mobileVariant, context, layout }) {
 
-    return <div className={`secondary ${mquery || ""}`}>
+    return <div className={`secondary ${mobileVariant || ""}`}>
 
-        <ButtonCarroussel mquery={mquery} context={context} />
-        <ListVideo videos={videos} mquery={mquery} context={context} layout={layout} />
+        <ButtonCarroussel mobileVariant={mobileVariant} context={context} />
+        <ListVideo videos={videos} mobileVariant={mobileVariant} context={context} layout={layout} />
 
     </div>
 

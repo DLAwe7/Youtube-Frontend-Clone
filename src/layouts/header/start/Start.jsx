@@ -1,5 +1,5 @@
 import Logo from "../../../components/Logo"
-import HamburguerButton from "../../../components/Buttons/Hamburguer"
+import HamburguerButton from "../../../components/Buttons/HamburguerMenu"
 import { useSidebar } from "../../../hooks/useSidebar"
 import useRestoreFocus from "../../../hooks/useRestoreFocus";
 import { useRef } from "react";

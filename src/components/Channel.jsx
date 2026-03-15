@@ -6,15 +6,14 @@ import { formatCount } from '../utils/formatters';
 function Channel({ channel, tabIndex }) {
 
 
-
     return <div className='channel-info'>
 
 
-        {channel && <a tabIndex={tabIndex} className='channel-image-container' href={`https://www.youtube.com/channel/${channel.id}`} target='_blank'><img className="user-temp-img" src={channel?.snippet?.thumbnails?.default?.url} alt={channel?.snippet?.title} /> </a>}
+        {channel && <a tabIndex={tabIndex} className='channel-image-container' href={`https://www.youtube.com/channel/${channel.id}`} rel="noopener noreferrer" target='_blank'><img className="user-channel-img" src={channel?.snippet?.thumbnails?.default?.url} alt={channel?.snippet?.title} /> </a>}
 
         <div className="channel-name">
 
-            {channel && <a href={`https://www.youtube.com/channel/${channel.id}`} target='_blank' tabIndex={tabIndex}>{channel?.snippet?.title} <FontAwesomeIcon icon={faCircleCheck} /></a>}
+            {channel && <a href={`https://www.youtube.com/channel/${channel.id}`} rel="noopener noreferrer" target='_blank' tabIndex={tabIndex}>{channel?.snippet?.title} <FontAwesomeIcon icon={faCircleCheck} /></a>}
 
             <span className='followers-count'>{formatCount(channel?.statistics?.subscriberCount)} subscribers</span>
 

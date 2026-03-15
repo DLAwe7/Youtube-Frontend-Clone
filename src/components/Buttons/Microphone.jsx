@@ -4,7 +4,6 @@ import "./Microphone.css"
 import { useState } from 'react';
 import { useClickOutside } from "../../hooks/useClickOutside"
 import { useEscKeyDown } from "../../hooks/useEscKeyDown"
-import { ToggleButton } from '../ToggleButton.jsx';
 import { useFloating, offset, flip, shift, autoUpdate } from "@floating-ui/react";
 import { createPortal } from "react-dom";
 import { FocusScope } from '@radix-ui/react-focus-scope';
@@ -56,11 +55,12 @@ function Microphone() {
 
         <div className='microphone-button-wrapper'>
 
-            <ToggleButton ref={refs.setReference} className={"microphone-button"} isOpen={isOpen} toggle={toggle} controlsId={"microphone-dropdown"} aria-label='Search with voice'>
+            <button ref={refs.setReference} className={"microphone-button"} aria-expanded={isOpen} onClick={() => toggle()} aria-controls={"microphone-dropdown"}
+                aria-label='Search with voice'>
 
                 <FontAwesomeIcon icon={faMicrophone} aria-hidden="true" />
 
-            </ToggleButton>
+            </button>
 
             {isOpen && createPortal(<FocusScope loop trapped>
 
@@ -71,11 +71,12 @@ function Microphone() {
                     <div className='mic-dropd-title'>
                         <span id="mic-title">Search with your voice</span>
 
-                        <ToggleButton className={"mic-closing-button"} isOpen={isOpen} toggle={toggle} controlsId={"microphone-dropdown"} aria-label='Close Menu Button'>
+                        <button className={"mic-closing-button"} aria-expanded={isOpen} onClick={() => toggle()} aria-controls={"microphone-dropdown"}
+                            aria-label='Close Menu Button'>
 
                             <FontAwesomeIcon icon={faX} aria-hidden="true" />
 
-                        </ToggleButton>
+                        </button>
 
 
                     </div>
@@ -86,11 +87,12 @@ function Microphone() {
 
                     <div className='dropd-button-wrapper'>
 
-                        <ToggleButton className={"mic-dropd-button"} isOpen={showInfo} toggle={toggleText} controlsId={"mic-text"} aria-label='Activate Microphone'>
+                        <button className={"mic-dropd-button"} aria-expanded={showInfo} onClick={() => toggleText()} aria-controls={"mic-text"}
+                            aria-label='Activate Microphone'>
 
                             <FontAwesomeIcon icon={faMicrophone} aria-hidden="true" />
 
-                        </ToggleButton>
+                        </button>
 
 
                         {showInfo && <p className='mock-text' id='mic-text'>This is a mock button!</p>}

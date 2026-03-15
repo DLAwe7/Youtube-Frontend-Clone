@@ -67,7 +67,7 @@ function Video() {
 
         <div className='create-video-wrapper' ref={menuRef}>
 
-            <button ref={refs.setReference} aria-haspopup="true" className={"addVideo-button"} aria-expanded={isOpen} onClick={toggle} aria-controls={"vid-cr-dropdopwn"} aria-label="Upload and or create video">
+            <button ref={refs.setReference} aria-haspopup="menu" className={"addVideo-button"} aria-expanded={isOpen} onClick={toggle} aria-controls={"vid-cr-dropdopwn"} aria-label="Upload and or create video">
 
                 <FontAwesomeIcon icon={faPlus} aria-hidden="true" />
                 <span aria-hidden="true">Create</span>

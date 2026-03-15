@@ -13,11 +13,6 @@ function Description({ data, channel }) {
 
     const controller = useDescriptionController(data);
 
-
-
-
-
-
     return isMobile ? (<DescriptionMobile {...controller} data={data} channel={channel} />) : (<DescriptionDesktop {...controller} data={data} channel={channel} />);
 
 }

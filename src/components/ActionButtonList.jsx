@@ -14,35 +14,45 @@ function ActionButtonList({ id, mode, data, isPopover }) {
 
     const { toastId, showToast } = useToast();
 
+    const [isSubscribed, setIsSubscribed] = useState(false);
+
     const [reaction, setReaction] = useState(null);
-    const [likes, setLikes] = useState(null);
-    const [isSubscribed, setIsSubscribed] = useState(null);
+    const [rawLikes, setRawLikes] = useState(() =>
+        Number(data?.statistics?.likeCount ?? 0)
+    );
 
     useEffect(() => {
-        if (data?.statistics?.likeCount && likes === null) {
-            setLikes(Number(data.statistics.likeCount));
-        }
-    }, [data, likes]);
+        setRawLikes(Number(data?.statistics?.likeCount ?? 0));
+        setReaction(null);
+    }, [data?.id, data?.statistics?.likeCount]);
 
     const toggleReaction = (type) => {
-        setReaction(prevReaction => {
-            setLikes(prevLikes => {
-                let delta = 0;
+        setRawLikes((prev) => {
+            if (reaction === null) {
+                if (type === "like") return prev + 1;
+                if (type === "dislike") return prev - 1;
+            }
 
-                if (prevReaction === null) {
-                    delta = type === "like" ? 1 : -1;
-                } else if (prevReaction === type) {
-                    delta = type === "like" ? -1 : 1;
-                } else {
-                    delta = type === "like" ? 2 : -2;
-                }
+            if (reaction === "like") {
+                if (type === "like") return prev - 1;
+                if (type === "dislike") return prev - 2;
+            }
 
-                return Math.max(0, prevLikes + delta);
-            });
+            if (reaction === "dislike") {
+                if (type === "dislike") return prev + 1;
+                if (type === "like") return prev + 2;
+            }
 
-            return prevReaction === type ? null : type;
+            return prev;
         });
+
+        setReaction((prev) => (prev === type ? null : type));
+
     };
+
+
+
+    const displayedLikes = Math.max(0, rawLikes);
 
 
 
@@ -54,14 +64,14 @@ function ActionButtonList({ id, mode, data, isPopover }) {
             {data && <li className={`like-dislike-button`} role={isPopover ? "none" : undefined} >
 
                 <button role={isPopover ? "menuitem" : undefined} className={`description-like-button ${reaction === "like" ? "animated" : ""}`} onClick={() => toggleReaction("like")}
-                    aria-label={`like button. amount of likes: ${likes}`} aria-pressed={reaction === "like"}>
+                    aria-label={`Like video. ${displayedLikes} likes`} aria-pressed={reaction === "like"}>
                     <FontAwesomeIcon icon={faThumbsUp} aria-hidden="true" />
-                    <span>{formatCount(likes)}</span>
+                    <span>{formatCount(displayedLikes)}</span>
                 </button>
 
                 <button role={isPopover ? "menuitem" : undefined}
                     className={`description-dislike-button ${reaction === "dislike" ? "animated" : ""}`} onClick={() => toggleReaction("dislike")}
-                    aria-label="dislike button" aria-pressed={reaction === "dislike"}>
+                    aria-label="Dislike video" aria-pressed={reaction === "dislike"}>
 
                     <FontAwesomeIcon icon={faThumbsDown} aria-hidden="true" />
 
@@ -69,7 +79,7 @@ function ActionButtonList({ id, mode, data, isPopover }) {
 
             </li>}
 
-            <li className={`action-subscribe mquery`} role={isPopover ? "none" : undefined} >
+            <li className={`action-subscribe mobileVariant`} role={isPopover ? "none" : undefined} >
 
 
                 <button role={isPopover ? "menuitem" : undefined} className={`subscribe-button ${mode ? mode : ""} ${isSubscribed ? "animated" : ""}`} aria-pressed={isSubscribed} onClick={() => setIsSubscribed(prev => !prev)}>

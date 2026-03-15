@@ -63,7 +63,7 @@ function ButtonsStorage({ isBtnStorage, setIsBtnStorage, data }) {
 
         <div className='button-storage-wrapper' >
 
-            <button ref={refs.setReference} className="button-storage" onClick={toggle} aria-controls='buttons-storage-dropdown' aria-expanded={isBtnStorage}>
+            <button ref={refs.setReference} className="button-storage" aria-haspopup="menu" onClick={toggle} aria-controls='buttons-storage-dropdown' aria-expanded={isBtnStorage}>
 
                 <FontAwesomeIcon icon={faEllipsis} />
 
@@ -83,7 +83,6 @@ function ButtonsStorage({ isBtnStorage, setIsBtnStorage, data }) {
                         }}>
                             <ActionButtonList
                                 isPopover={true}
-                                stopPropagation={true}
                                 id={"buttons-storage-dropdown"} mode={"dropdown"} className={"isBtnStorage"}
                                 isBtnStorage={isBtnStorage} data={data} toggleDiv={() => showToast("🎬 Demo Mode: This feature is not connected to a backend.")}>
                             </ActionButtonList>

@@ -26,12 +26,12 @@ function Header() {
         {isSearchbarOpen && <>
 
 
-            <button className="header-searchbar-btn" onClick={() => setIsSearchbarOpen(false)}>
+            <button className="header-searchbar-btn" onClick={() => setIsSearchbarOpen(false)} aria-label="close research button">
 
                 <FontAwesomeIcon icon={faArrowLeft} aria-hidden="true" />
 
             </button>
-            <SearchBar mquery="mquery" />
+            <SearchBar mobileVariant="mobileVariant" />
 
         </>}
 
